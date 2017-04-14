@@ -320,8 +320,8 @@ class ConsoleDiff(object):
 
     def _generate_table(self, fromdesc, todesc, diffs):
         if fromdesc or todesc:
-            yield (simple_colorize(fromdesc, "blue"),
-                   simple_colorize(todesc, "blue"))
+            yield (simple_colorize('---=== %s ===---' % fromdesc, "blue"),
+                   simple_colorize('---=== %s ===---' % todesc, "blue"))
 
         for i, line in enumerate(diffs):
             if line is None:
